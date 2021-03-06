@@ -86,7 +86,7 @@ public class BallBounce extends JPanel implements ActionListener {
 
     public boolean timeCheck(long time1, long time2) {
         time2 = System.currentTimeMillis();
-        if ((time2 - time1) > 400) {
+        if ((time2 - time1) > 1000) {
             time1 = time2;
             return true;
         }
