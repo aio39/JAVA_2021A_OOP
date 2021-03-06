@@ -11,6 +11,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
 import java.util.ArrayList;
+import java.awt.GradientPaint;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -71,9 +72,18 @@ class MyPanel extends JPanel {
 
         g2.setColor(Color.blue);
         g2.setStroke(new BasicStroke(3));
-        for (Shape s : shapeArray)
-            g2.draw(s);
 
+        GradientPaint gp = new GradientPaint(0, 10, Color.white, 0, 60, Color.red);
+
+        for (Shape s : shapeArray) {
+            if (s == shapeArray.get(0)) {
+                g2.draw(s);
+            } else {
+                g2.setPaint(gp);
+                g2.fill(s);
+            }
+
+        }
     }
 
 }
