@@ -23,6 +23,7 @@ public class ComboBoxFrame extends JFrame implements ActionListener {
 
         animalList.setSelectedIndex(0);
         animalList.addActionListener(this);
+        animalList.setEditable(true);
 
         label = new JLabel();
         label.setHorizontalAlignment(JLabel.CENTER);
@@ -36,9 +37,21 @@ public class ComboBoxFrame extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        JComboBox cb = (JComboBox) e.getSource();
-        String name = (String) cb.getSelectedItem();
-        changePicture(name);
+        if (e.getActionCommand() == "comboBoxEdited") {
+
+            JComboBox cb = (JComboBox) e.getSource();
+            String text = (String) cb.getSelectedItem();
+            cb.addItem(text);
+
+        }
+
+        if (e.getActionCommand() == "comboBoxChanged") {
+
+            JComboBox cb = (JComboBox) e.getSource();
+            String name = (String) cb.getSelectedItem();
+            System.out.println(name);
+            changePicture(name);
+        }
     }
 
     public void changePicture(String name) {
