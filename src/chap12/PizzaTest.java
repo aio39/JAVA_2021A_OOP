@@ -101,9 +101,6 @@ class MyFrame extends JFrame implements ActionListener {
             this.text.setText("" + sum);
         }
         if (e.getSource() == this.cancel_button) {
-            temp1 = 0;
-            temp2 = 0;
-            temp3 = 0;
             sum = 0;
             this.text.setText("" + sum);
         }
