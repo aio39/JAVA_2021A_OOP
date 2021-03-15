@@ -18,6 +18,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -46,14 +47,16 @@ public class TextConverter extends JFrame {
     }
 
     public static String papago(String korea) {
-        String clientId = env.id;// 애플리케이션 클라이언트 아이디값";
-        String clientSecret = env.pass;// 애플리케이션 클라이언트 시크릿값";
-        /*
-         * public class env { public static String id = "client ID"; public static
-         * String pass = "Secret Key";
-         * 
-         * }
-         */
+        Properties myprops = new Properties();
+        try {
+            File file = new File("src/chap12/papago.properties");
+            myprops.load(new FileReader(file));
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+
+        String clientId = myprops.getProperty("CLIENT_ID");// 애플리케이션 클라이언트 아이디값";
+        String clientSecret = myprops.getProperty("SECRET_KEY");// 애플리케이션 클라이언트 시크릿값";
 
         String apiURL = "https://openapi.naver.com/v1/papago/n2mt";
         String text;

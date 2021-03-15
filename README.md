@@ -17,7 +17,6 @@
  ┃ ┣ 📜Capture.java  
  ┃ ┣ 📜CheckBoxDemo.java  
  ┃ ┣ 📜ComboBoxFrame.java  
- ┃ ┣ 📜env.java  
  ┃ ┣ 📜FileChooserTest.java  
  ┃ ┣ 📜ImageLabelTest.java  
  ┃ ┣ 📜PizzaTest.java  
