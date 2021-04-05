@@ -35,12 +35,13 @@ public class ArrayListTest {
 
     private static void timeCheckArrayVSLinked() {
 
-        // List<Integer> list = new ArrayList<>(); // 14ms
-        List<Integer> list = new LinkedList<>(); // 7ms
+        List<Integer> list = new ArrayList<>(); // 산입 14ms , 탐색 1ms
+        // List<Integer> list = new LinkedList<>(); // 산입 7ms , 탐색 47mm
         IntStream.rangeClosed(1, 10000).forEach(i -> list.add(i));
         long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 10000; i++) {
-            list.add(100, (i + 1) * 1000);
+        for (int i = 0; i < list.size(); i++) {
+            // list.add(100, (i + 1) * 1000);
+            list.get(i);
 
         }
         long endTime = System.currentTimeMillis();
