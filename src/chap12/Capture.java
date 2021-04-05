@@ -9,7 +9,6 @@ import java.awt.image.BufferedImage;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import jdk.vm.ci.hotspot.JFR;
 
 public class Capture {
     public static void main(String[] args) {

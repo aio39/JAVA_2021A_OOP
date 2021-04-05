@@ -29,3 +29,16 @@ TestBank
 
 
 env.java
+.idea/.gitignore
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/JAVA_2021A_OOP.iml
+.idea/misc.xml
+.idea/workspace.xml
+.idea/dataSources/231a2a81-41a6-4354-9a0e-01f7ff6fc9ea.xml
+.idea/dataSources/231a2a81-41a6-4354-9a0e-01f7ff6fc9ea/storage_v2/_src_/schema/INSA.M14iAA.meta
+.idea/dataSources/231a2a81-41a6-4354-9a0e-01f7ff6fc9ea/storage_v2/_src_/schema/PUBLIC.aaZQjQ.meta
+.idea/dataSources/231a2a81-41a6-4354-9a0e-01f7ff6fc9ea/storage_v2/_src_/schema/SYS.rUIBAA.meta
+.idea/dataSources/231a2a81-41a6-4354-9a0e-01f7ff6fc9ea/storage_v2/_src_/schema/SYSTEM.L2avkg.meta
+.idea/misc.xml
+.gitignore
