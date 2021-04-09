@@ -1,15 +1,27 @@
 package chap15;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class SetTest2 {
+
     public static void main(String[] args) {
-        test1();
+        // test1();
+        test2();
+    }
+
+    private static void test2() {
+        Queue<Integer> queue = new PriorityQueue<>(new MyComparator()); // comparator를 넣어주면 poll 이외에도 항상 정렬됨.
+        for (int i = 10; i > 0; i--)
+            queue.offer(i);
+        System.out.println(queue);
+        for (Integer n : queue)
+            System.out.println(n + "");
+
+        int size = queue.size();
+        for (int i = 0; i < size; i++) {
+            System.out.println((i + 1) + "번쨰 원소" + queue.poll());
+        }
+
     }
 
     private static void test1() {
@@ -51,6 +63,15 @@ public class SetTest2 {
             System.out.printf("집합 %s는 집합 %s의 원소를 포함하지 않습니다.", set1, set2);
         }
 
+    }
+
+}
+
+class MyComparator implements Comparator<Integer> {
+
+    @Override
+    public int compare(Integer o1, Integer o2) {
+        return (o1.intValue() - o2.intValue()) * -1;
     }
 
 }
