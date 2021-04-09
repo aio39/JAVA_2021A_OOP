@@ -42,3 +42,7 @@ env.java
 .idea/dataSources/231a2a81-41a6-4354-9a0e-01f7ff6fc9ea/storage_v2/_src_/schema/SYSTEM.L2avkg.meta
 .idea/misc.xml
 .gitignore
+.idea/.gitignore
+.idea/dataSources.xml
+.idea/JAVA_2021A_OOP.iml
+.idea/misc.xml
