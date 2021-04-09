@@ -42,6 +42,15 @@ public class SetTest2 {
         Set<Integer> diffSet = new HashSet<>(set1);
         diffSet.removeAll(set2);
         System.out.println(diffSet);
+
+        boolean flag = set1.containsAll(set2);
+        if (flag) {
+            System.out.printf("집합 %s는 집합 %s의 원소를 포함합니다", set1, set2);
+        } else {
+
+            System.out.printf("집합 %s는 집합 %s의 원소를 포함하지 않습니다.", set1, set2);
+        }
+
     }
 
 }
