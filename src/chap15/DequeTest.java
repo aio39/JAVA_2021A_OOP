@@ -10,7 +10,7 @@ public class DequeTest {
             dq.add(i); // push 가능 // addFirst //add last
         }
         while (dq.size() > 0) {
-            Integer val = dq.poll(); // pip
+            Integer val = dq.poll(); // pollFirst
             System.out.print(val + " ");
         }
 
@@ -18,7 +18,7 @@ public class DequeTest {
             dq.add(i);
         }
         while (dq.size() > 0) {
-            Integer val = dq.pollLast(); // pip
+            Integer val = dq.pollLast(); // LiPO
             System.out.print(val + " ");
         }
     }
