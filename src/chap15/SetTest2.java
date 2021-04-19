@@ -10,7 +10,7 @@ public class SetTest2 {
     }
 
     private static void test2() {
-        Queue<Integer> queue = new PriorityQueue<>(new MyComparator()); // comparator를 넣어주면 poll 이외에도 항상 정렬됨.
+        Queue<Integer> queue = new PriorityQueueTest<>(new MyComparator()); // comparator를 넣어주면 poll 이외에도 항상 정렬됨.
         for (int i = 10; i > 0; i--)
             queue.offer(i);
         System.out.println(queue);
