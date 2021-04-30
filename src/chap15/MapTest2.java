@@ -22,7 +22,7 @@ public class MapTest2 {
     private static void ObjectList() {
         ArrayList<Student2> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            list.add(new Student2("이름" + i, random.nextInt(100) + 1));
+            list.add(new Student2("학생" + i, random.nextInt(100) + 1));
         }
         PrintArray(list);
         System.out.println("---------------------------");
@@ -89,7 +89,11 @@ class Student2 implements Comparable<Student2> {
 
     @Override
     public String toString() {
-        return "Student2 [grade=" + grade + ", name=" + name + "]";
+        if (grade < 10) {
+            return "Student2 [grade=0" + grade + ", name=" + name + "]";
+        } else {
+            return "Student2 [grade=" + grade + ", name=" + name + "]";
+        }
     }
 
     @Override
