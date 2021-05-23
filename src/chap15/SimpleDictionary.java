@@ -112,8 +112,10 @@ public class SimpleDictionary extends JPanel implements ActionListener {
                 PreparedStatement pstmt = con.prepareStatement(sql);
                 pstmt.setString(1, key);
                 pstmt.setString(2, value);
+                System.out.println(pstmt.toString());
                 pstmt.executeUpdate();
             } else {
+                System.out.println("initialize");
                 initialize();
             }
 
